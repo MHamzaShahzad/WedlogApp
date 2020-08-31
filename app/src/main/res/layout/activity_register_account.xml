@@ -8,7 +8,6 @@
         android:layout_height="wrap_content"
         android:background="#FFFF00"
         android:orientation="vertical"
-
         android:padding="30dp">
 
         <ImageView
@@ -50,6 +49,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text" />
+
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -64,6 +64,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text" />
+
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -78,6 +79,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress" />
+
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -92,8 +94,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword" />
-            </com.google.android.material.textfield.TextInputLayout>
 
+            </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -107,6 +109,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword" />
+
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -121,7 +124,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="phone" />
+
             </com.google.android.material.textfield.TextInputLayout>
+
         </LinearLayout>
 
         <TextView
@@ -136,7 +141,6 @@
             android:id="@+id/genderGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
 
             <RadioButton
                 android:id="@+id/male"
@@ -173,14 +177,12 @@
             android:id="@+id/btnSubmit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:background="#000000"
             android:text="@string/create_your_account"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
-
             android:textStyle="bold" />
 
         <TextView
@@ -193,4 +195,5 @@
             android:textStyle="bold" />
 
     </LinearLayout>
+
 </ScrollView>
