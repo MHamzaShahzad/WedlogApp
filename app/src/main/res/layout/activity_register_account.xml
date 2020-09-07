@@ -6,19 +6,21 @@
     <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FFFF00"
         android:orientation="vertical"
+        android:background="@color/colorApp"
         android:padding="30dp">
 
         <ImageView
             android:layout_width="150dp"
             android:layout_height="150dp"
+            android:layout_gravity="center"
             android:contentDescription="@string/todo"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@mipmap/app_icon" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:text="@string/welcome"
             android:textColor="#000000"
             android:textSize="40sp"
@@ -27,7 +29,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
             android:text="@string/sign_uup_to_start_your_new_journey"
+            android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="18sp" />
 
@@ -40,30 +44,16 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:autofillHints="@string/first_name"
-                android:hint="@string/first_name"
+                android:autofillHints="@string/username"
+                android:hint="@string/username"
                 app:endIconMode="clear_text"
                 app:hintTextColor="#000000">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputUserName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:autofillHints="@string/last_name"
-                android:hint="@string/last_name"
-                app:endIconMode="clear_text"
-                app:hintTextColor="#000000">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text" />
+                    android:inputType="textPersonName" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -76,6 +66,7 @@
                 app:hintTextColor="#000000">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress" />
@@ -91,6 +82,7 @@
                 app:hintTextColor="#000000">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword" />
@@ -100,70 +92,20 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:autofillHints="@string/conform_password"
-                android:hint="@string/conform_password"
+                android:autofillHints="@string/confirm_password"
+                android:hint="@string/confirm_password"
                 app:endIconMode="clear_text"
                 app:hintTextColor="#000000">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputConfirmPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:autofillHints="@string/enter_your_mobile_number"
-                android:hint="@string/enter_your_mobile_number"
-                app:endIconMode="clear_text"
-                app:hintTextColor="#000000">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="phone" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/select_your_gender"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <RadioGroup
-            android:id="@+id/genderGroup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <RadioButton
-                android:id="@+id/male"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/male"
-                android:textColor="#000000" />
-
-            <RadioButton
-                android:id="@+id/female"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/female"
-                android:textColor="#000000" />
-
-            <RadioButton
-                android:id="@+id/ratherNotSay"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/rather_not_say"
-                android:textColor="#000000" />
-
-        </RadioGroup>
 
         <CheckBox
             android:id="@+id/termsAndConditions"
@@ -174,7 +116,7 @@
             android:textColor="#000000" />
 
         <Button
-            android:id="@+id/btnSubmit"
+            android:id="@+id/btnRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -183,9 +125,11 @@
             android:text="@string/create_your_account"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
+            android:padding="5dp"
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/btnAlreadyHaveAccount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"

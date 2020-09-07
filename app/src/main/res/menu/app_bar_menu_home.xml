@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_profile"
+        android:title="@string/title_profile" />
+
+    <item
+        android:id="@+id/menu_orders"
+        android:title="@string/title_orders" />
+
+    <item
+        android:id="@+id/menu_bookings"
+        android:title="@string/title_bookings" />
+
+    <item
+        android:id="@+id/menu_logout"
+        android:title="@string/title_logout" />
+
+</menu>

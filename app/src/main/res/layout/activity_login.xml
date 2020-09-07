@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFF00"
+    android:background="@color/colorApp"
     android:orientation="vertical"
     android:padding="20dp">
 
@@ -10,22 +10,18 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:contentDescription="@string/todo"
-        android:src="@mipmap/ic_launcher" />
-
-    <TextViewg
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/welxom_back"
-        android:textColor="#000000"
-        android:textSize="40sp"
-        android:textStyle="bold" />
+        android:src="@mipmap/app_icon"
+        android:layout_gravity="center"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/sign_in_to_continue"
         android:textColor="#000000"
-        android:textSize="18sp" />
+        android:layout_margin="10dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:gravity="center_horizontal" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -40,6 +36,7 @@
             android:hint="@string/email">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress" />
@@ -53,6 +50,7 @@
             android:hint="@string/password">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword" />
@@ -62,7 +60,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnSubmit"
+        android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -74,6 +72,7 @@
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/linkRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
