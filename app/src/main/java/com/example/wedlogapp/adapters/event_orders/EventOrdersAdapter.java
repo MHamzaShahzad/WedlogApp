@@ -30,7 +30,10 @@ public class EventOrdersAdapter extends RecyclerView.Adapter<EventOrdersAdapterH
     @Override
     public void onBindViewHolder(@NonNull EventOrdersAdapterHolder holder, int position) {
         EventOrder eventOrder = eventOrderList.get(holder.getAdapterPosition());
-
+        holder.textPlaceName.setText(eventOrder.getEvent_name());
+        holder.textPlaceAppointDate.setText(eventOrder.getAppoint_date());
+        holder.textPlaceCreate.setText(eventOrder.getCreate());
+        holder.textPlaceType.setText(eventOrder.getType());
     }
 
     @Override

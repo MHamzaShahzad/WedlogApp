@@ -30,6 +30,10 @@ public class HallOrdersAdapter extends RecyclerView.Adapter<HallOrdersAdapterHol
     @Override
     public void onBindViewHolder(@NonNull HallOrdersAdapterHolder holder, int position) {
         HallOrder hallOrder = hallOrderList.get(holder.getAdapterPosition());
+        holder.textPlaceName.setText(hallOrder.hall_name);
+        holder.textPlaceAppointDate.setText(hallOrder.appoint_date);
+        holder.textPlaceCustomNote.setText(hallOrder.custom_note);
+        holder.textPlaceSeatingPlan.setText(hallOrder.seating_plan);
     }
 
     @Override

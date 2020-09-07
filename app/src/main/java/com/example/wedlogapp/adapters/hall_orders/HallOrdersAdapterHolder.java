@@ -10,7 +10,7 @@ import com.example.wedlogapp.R;
 
 public class HallOrdersAdapterHolder extends RecyclerView.ViewHolder {
 
-    private TextView textPlaceName, textPlaceAppointDate, textPlaceSeatingPlan, textPlaceCustomNote;
+    public TextView textPlaceName, textPlaceAppointDate, textPlaceSeatingPlan, textPlaceCustomNote;
 
     public HallOrdersAdapterHolder(@NonNull View itemView) {
         super(itemView);
