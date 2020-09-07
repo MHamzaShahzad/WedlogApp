@@ -22,6 +22,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -232,6 +233,7 @@ public class CreateEventVendorFragment extends DialogFragment implements BSImage
             @Override
             public void onResponse(String response) {
                 Log.i(TAG, "onResponse-createEventVendor: " + response);
+                Toast.makeText(mContext, "Event Created Successfully!", Toast.LENGTH_SHORT).show();
             }
         }, new Response.ErrorListener() {
             @Override
